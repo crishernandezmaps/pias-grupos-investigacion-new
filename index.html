@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ghotam-rounded/stylesheet.css">
+</head>
+
+<body>
+
+  <div class="navbar-header">
+    <div class="btn-group geoB">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="alfu"><a href="#">Alimento Funcional</a></a></li>
+        <li class="but" id="alge"><a href="#">Alimento Grupos Especiales</a></a></li>
+        <li class="but" id="aldi"><a href="#">Alimentos Disminuidos</a></a></li>
+        <li class="but" id="infu"><a href="#">Ingredientes Funcionales</a></a></li>
+        <li class="but" id="ades"><a href="#">Aditivos Especializados</a></a></li>
+        <li class="but" id="inoc"><a href="#">Inocuidad</a></a></li>
+        <li class="but" id="cali"><a href="#">Calidad</a></a></li>
+        <li class="but" id="traz"><a href="#">Trazabilidad</a></a></li>
+        <li class="but" id="mjge"><a href="#">Mejoramiento Genetico</a></a></li>
+        <li class="but" id="sitp"><a href="#">Sistemas Productivos</a></a></li>
+        <li class="but" id="enin"><a href="#">Envases Inteligentes</a></a></li>
+        <li class="but" id="enac"><a href="#">Envases Activos</a></a></li>
+        <li class="but" id="numa"><a href="#">Nuevos Materiales</a></a></li>
+        <li class="but" id="nuse"><a href="#">Nuevos Sistemas Envasados</a></a></li>
+        <li class="but" id="vuae"><a href="#">Vida Util Envasados</a></a></li>
+        <li class="but" id="sust"><a href="#">Sustentabilidad</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group geoC">
+      <button id="capbutC" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Capacidad <span class="caret"></span></button>
+      <ul class="dropdown-menu" id="capbut">
+        <li class="but" id="lab"><a href="#">Laboratorios</a></a></li>
+        <li class="but" id="ser"><a href="#">Servicios</a></a></li>
+        <li class="but" id="prog"><a href="#">Programas</a></a></li>
+        <li class="but" id="proj"><a href="#">Proyectos</a></a></li>
+        <li class="but" id="pub"><a href="#">Publicaciones</a></a></li>
+        <li class="but" id="inv"><a href="#">Investigadores</a></a></li>
+        <li class="but" id="nac"><a href="#">Nacionales</a></a></li>
+        <li class="but" id="ext"><a href="#">Internacionales</a></a></li>
+      </ul>
+      <button onclick="rel()" type="button" class="btn btn-outline-success btn-sm">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-9 text-left">
+        <div id="bubbles"></div>
+        <div class="btn-group-vertical btn-group-sm regionesBut" role="group" aria-label="Small button group">
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Arica Parinacota</button>
+          <button type="button" class="btn btn-secondary" id="tar"><img src="img/legend/tar.png"> Tarapaca</button>
+          <button type="button" class="btn btn-secondary" id="ant"><img src="img/legend/ant.png"> Antofagasta</button>
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Atacama</button>
+          <button type="button" class="btn btn-secondary" id="coq"><img src="img/legend/coq.png"> Coquimbo</button>
+          <button type="button" class="btn btn-secondary" id="val"><img src="img/legend/val.png"> Valparaiso</button>
+          <button type="button" class="btn btn-secondary" id="met"><img src="img/legend/met.png"> Metropolitana</button>
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> O'Higgins</button>
+          <button type="button" class="btn btn-secondary" id="mau"><img src="img/legend/mau.png"> Maule</button>
+          <button type="button" class="btn btn-secondary" id="bio"><img src="img/legend/bio.png"> BioBio</button>
+          <button type="button" class="btn btn-secondary" id="ara"><img src="img/legend/ara.png"> Araucania</button>
+          <button type="button" class="btn btn-secondary" id="los"><img src="img/legend/los.png"> Los Rios</button>
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Los Lagos</button>
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Aysén</button>
+          <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Magallanes</button>
+        </div>
+        <p id="texto-reg"><img src="img/legend/no.png"> Región sin Grupo de Investigación</p>
+        <p id="texto-lef">Click en las burbujas <i class="fa fa-hand-o-up" aria-hidden="true"></i></p>
+      </div>
+      <div class="col-sm-3 sidenav">
+        <div class="well">
+          <div id="hidden">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- D3 -->
+  <script src="js/d3.v4.min.js"></script>
+  <script src="js/d3-force-cluster.js"></script>
+  <script src="js/d3-tip.js"></script>
+  <!-- Tabletop -->
+  <script src="js/tabletop.js"></script>
+  <!-- Custom Visualizations -->
+  <script src="js/modelo_general.js"></script>
+  <!-- Others -->
+  <script src="js/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="js/underscore-min.js" ></script>
+  <script src="https://use.fontawesome.com/217857b264.js"></script>
+
+  <!-- Menu change according to the option -->
+  <script type="text/javascript">
+  $(function(){
+    $(".geoA li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".geoB li a").click(function(){
+      $("#capbutB:first-child").text($(this).text());
+      $("#capbutB:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".geoC li a").click(function(){
+      $("#capbutC:first-child").text($(this).text());
+      $("#capbutC:first-child").val($(this).text());
+    });
+  });
+  function rel() {
+    location.reload();
+  }
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+
+  </script>
+</body>
+</html>
