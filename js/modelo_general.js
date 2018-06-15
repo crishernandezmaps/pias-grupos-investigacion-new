@@ -43,6 +43,29 @@ function drawChart(data) {
           nacional: d.netnacional,
           internacional: d.netinternacional,
           redes: d.networks,
+          // NUEVAS CATEGORIAS
+          a_funcional: d.alimento_funcional,
+          a_grup_esp: d.alimento_grupos_especiales,
+          adic: d.alimentos_disminuidos_ingredientes_críticos,
+          in_func: d.ingredientes_funcionales,
+          ad_esp: d.aditivos_especializados,
+          inocuidad: d.inocuidad,
+          calidad: d.calidad,
+          traza: d.trazabilidad,
+          mej_gen: d.mejoramiento_genetico,
+          sis_pro: d.sistemas_productivos,
+          env_int: d.envases_inteligentes,
+          env_act: d.envases_activos,
+          nue_mat: d.nuevos_materiales,
+          nue_sis_env: d.nuevos_sistemas_envasado,
+          vuae: d.vida_util_alimentos_envasados,
+          sustent: d.sustentabilidad,
+          entidad: d.entidad,
+          web: d.web_entidad,
+          telefono: d.telefono_entidad,
+          mail: d.mail_entidad,
+          descripcion: d.linea_investigacion_gi,
+          inv_responsable: d.inv_responsable,
           entidad: d.entidad,
           web: d.web_entidad,
           telefono: d.telefono_entidad,
@@ -325,22 +348,27 @@ function drawChart(data) {
   });
 
   // Areas Generales////////////////////////////
-  d3.select('#alfu').on('click',function(){ node.style('opacity',function(d) { if(d.alimento_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#alge').on('click',function(){ node.style('opacity',function(d) { if(d.alimento_grupos_especiales == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#aldi').on('click',function(){ node.style('opacity',function(d) { if(d.alimentos_disminuidos_ingredientes_críticos == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#infu').on('click',function(){ node.style('opacity',function(d) { if(d.ingredientes_funcionales == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#ades').on('click',function(){ node.style('opacity',function(d) { if(d.aditivos_especializados == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#inoc').on('click',function(){ node.style('opacity',function(d) { if(d.inocuidad == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#cali').on('click',function(){ node.style('opacity',function(d) { if(d.calidad == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#traz').on('click',function(){ node.style('opacity',function(d) { if(d.trazabilidad == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#mjge').on('click',function(){ node.style('opacity',function(d) { if(d.mejoramiento_genetico == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#sitp').on('click',function(){ node.style('opacity',function(d) { if(d.sistemas_productivos == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#enin').on('click',function(){ node.style('opacity',function(d) { if(d.envases_inteligentes == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#enac').on('click',function(){ node.style('opacity',function(d) { if(d.envases_activos == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#numa').on('click',function(){ node.style('opacity',function(d) { if(d.nuevos_materiales == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#nuse').on('click',function(){ node.style('opacity',function(d) { if(d.nuevos_sistemas_envasado == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#vuae').on('click',function(){ node.style('opacity',function(d) { if(d.vida_util_alimentos_envasados == 'Si'){ return 1 } else{ return 0.2} }) })
-  d3.select('#sust').on('click',function(){ node.style('opacity',function(d) { if(d.sustentabilidad == 'Si'){ return 1 } else{ return 0.2} }) })
+  // Areas ////////////////////////////
+  // TRANSFORMAR ESTAS FUNCIONES EN LAS FUNCIONES QUE SERAN LOS NUEVOS MENÚ //////////////////////////////////////////////////////////////////
+  d3.select('#af').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#age').on('click',function(){ node.style('opacity',function(d) { if(d.a_grup_esp == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#ric').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#if').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#ae').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#i').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#c').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#t').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#mg').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#sp').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#o').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#ei').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#ea').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#nm').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#ifu').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#nse').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#vuae').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  d3.select('#s').on('click',function(){ node.style('opacity',function(d) { if(d.a_funcional == 'Si'){ return 1 } else{ return 0.2} }) })
+  // TRANSFORMAR ESTAS FUNCIONES EN LAS FUNCIONES QUE SERAN LOS NUEVOS MENÚ //////////////////////////////////////////////////////////////////
 
   var pallete2 = ["#F4C2C2", "#FF6961", "#FF5C5C", "#FF1C00", "#FF0800", "#FF0000", "#CD5C5C", "#E34234", "#D73B3E","#CE1620","#CC0000","#B22222","#B31B1B","#A40000","#800000","#701C1C","#3C1414","#321414"];
   var color2 = d3.scaleOrdinal(pallete2);
