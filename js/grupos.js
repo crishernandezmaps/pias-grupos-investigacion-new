@@ -302,6 +302,7 @@ function drawChart(data) {
   });
 
   // Areas ////////////////////////////
+  // TRANSFORMAR ESTAS FUNCIONES EN LAS FUNCIONES QUE SERAN LOS NUEVOS MENÚ //////////////////////////////////////////////////////////////////
   d3.select('#ino').on('click',function(){ node.style('opacity',function(d) { if(d.inocuidad == 'Si'){ return 1 } else{ return 0.2} }) })
   d3.select('#ing').on('click',function(){ node.style('opacity',function(d) { if(d.ingredientes == 'Si'){ return 1 } else{ return 0.2} }) })
   d3.select('#fun').on('click',function(){ node.style('opacity',function(d) { if(d.funcionalidad == 'Si'){ return 1 } else{ return 0.2} }) })

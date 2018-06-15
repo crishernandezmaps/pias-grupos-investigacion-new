@@ -204,20 +204,21 @@ li {
 /*//////*/
 .regionesBut {
   position: absolute;
-  top: 10%;
+  top: 20%;
 }
 
 #texto-lef {
   position: absolute;
-  top: 85%;
-  left: 55%;
+  top: 90%;
+  /*left: 55%;*/
+  left: 2.3%;
   font-size: 0.7em;
   color: #717770;
 }
 
 #texto-reg {
   position: absolute;
-  top: 5%;
+  top: 95%;
   left: 2.3%;
   font-size: 0.6em;
 }
@@ -273,7 +274,7 @@ a.more-but {
 /*///////// Media Queries ///////////*/
 @media only screen and (max-width: 768px) {
   .regionesBut {
-    top: 10%;
+    top: 20%;
   }
 
   #texto-dir {

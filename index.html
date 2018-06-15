@@ -12,27 +12,6 @@
 <body>
 
   <div class="navbar-header">
-    <div class="btn-group geoB">
-      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li class="but" id="alfu"><a href="#">Alimento Funcional</a></a></li>
-        <li class="but" id="alge"><a href="#">Alimento Grupos Especiales</a></a></li>
-        <li class="but" id="aldi"><a href="#">Alimentos Disminuidos</a></a></li>
-        <li class="but" id="infu"><a href="#">Ingredientes Funcionales</a></a></li>
-        <li class="but" id="ades"><a href="#">Aditivos Especializados</a></a></li>
-        <li class="but" id="inoc"><a href="#">Inocuidad</a></a></li>
-        <li class="but" id="cali"><a href="#">Calidad</a></a></li>
-        <li class="but" id="traz"><a href="#">Trazabilidad</a></a></li>
-        <li class="but" id="mjge"><a href="#">Mejoramiento Genetico</a></a></li>
-        <li class="but" id="sitp"><a href="#">Sistemas Productivos</a></a></li>
-        <li class="but" id="enin"><a href="#">Envases Inteligentes</a></a></li>
-        <li class="but" id="enac"><a href="#">Envases Activos</a></a></li>
-        <li class="but" id="numa"><a href="#">Nuevos Materiales</a></a></li>
-        <li class="but" id="nuse"><a href="#">Nuevos Sistemas Envasados</a></a></li>
-        <li class="but" id="vuae"><a href="#">Vida Util Envasados</a></a></li>
-        <li class="but" id="sust"><a href="#">Sustentabilidad</a></a></li>
-      </ul>
-    </div>
     <div class="btn-group geoC">
       <button id="capbutC" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Capacidad <span class="caret"></span></button>
       <ul class="dropdown-menu" id="capbut">
@@ -45,7 +24,50 @@
         <li class="but" id="nac"><a href="#">Nacionales</a></a></li>
         <li class="but" id="ext"><a href="#">Internacionales</a></a></li>
       </ul>
-      <button onclick="rel()" type="button" class="btn btn-outline-success btn-sm">Reiniciar</button>
+    </div>    
+    <div class="btn-group g01">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alimentos Procesados Saludables <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="01"><a href="#">Alimentos Funcionales</a></a></li>
+        <li class="but" id="02"><a href="#">Alimento para Grupos Especiales</a></a></li>
+        <li class="but" id="03"><a href="#">Reducción de Ingredientes Críticos</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group g02">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ingredientes Naturales <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="04"><a href="#">Ingredientes Funcionales</a></a></li>
+        <li class="but" id="05"><a href="#">Aditivos Especializados</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group g03">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Calidad e Inocuidad <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="06"><a href="#">Inocuidad</a></a></li>
+        <li class="but" id="07"><a href="#">Calidad</a></a></li>
+        <li class="but" id="08"><a href="#">Trazabilidad</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group g04">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Materias Primas Dedicadas <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="09"><a href="#">Mejoramiento Genético</a></a></li>
+        <li class="but" id="10"><a href="#">Sistemas Productivos </a></a></li>
+        <li class="but" id="11"><a href="#">Otras</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group g05">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Envases y Materiales <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="12"><a href="#">Envases Inteligentes</a></a></li>
+        <li class="but" id="13"><a href="#">Envases Activos</a></a></li>
+        <li class="but" id="14"><a href="#">Nuevos Materiales</a></a></li>
+        <li class="but" id="15"><a href="#">Ingredientes Funcionales</a></a></li>
+        <li class="but" id="16"><a href="#">Nuevos Sistemas de Envasado</a></a></li>
+        <li class="but" id="17"><a href="#">Vida Útil de Alimentos Envasados</a></a></li>
+        <li class="but" id="18"><a href="#">Sustentabilidad</a></a></li>
+      </ul>
+    <button onclick="rel()" type="button" class="btn btn-outline-success btn-sm">Reiniciar</button>
     </div>
   </div>
 
@@ -71,7 +93,7 @@
           <button type="button" class="btn btn-secondary disabled no"><img src="img/legend/no.png"> Magallanes</button>
         </div>
         <p id="texto-reg"><img src="img/legend/no.png"> Región sin Grupo de Investigación</p>
-        <p id="texto-lef">Click en las burbujas <i class="fa fa-hand-o-up" aria-hidden="true"></i></p>
+        <p id="texto-lef"><i class="fa fa-hand-o-up fa-2x" aria-hidden="true"></i> Click en las burbujas</p>
       </div>
       <div class="col-sm-3 sidenav">
         <div class="well">
@@ -101,21 +123,81 @@
   <!-- Menu change according to the option -->
   <script type="text/javascript">
   $(function(){
-    $(".geoA li a").click(function(){
+    $(".g01 li a").click(function(){
       $("#capbutA:first-child").text($(this).text());
       $("#capbutA:first-child").val($(this).text());
     });
   });
   $(function(){
-    $(".geoB li a").click(function(){
-      $("#capbutB:first-child").text($(this).text());
-      $("#capbutB:first-child").val($(this).text());
+    $(".g02 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
     });
   });
   $(function(){
-    $(".geoC li a").click(function(){
-      $("#capbutC:first-child").text($(this).text());
-      $("#capbutC:first-child").val($(this).text());
+    $(".g03 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g04 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g05 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g06 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g07 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g08 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g09 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g10 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g11 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g12 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".g13 li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
     });
   });
   function rel() {
