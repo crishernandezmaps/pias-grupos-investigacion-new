@@ -44,6 +44,7 @@ function drawChart(data) {
           internacional: d.netinternacional,
           redes: d.networks,
           // NUEVAS CATEGORIAS
+          ficha: d.ficha,
           a_funcional: d.alimento_funcional,
           a_grup_esp: d.alimento_grupos_especiales,
           adic: d.alimentos_disminuidos_ingredientes_críticos,
